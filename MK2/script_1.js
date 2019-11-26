@@ -22,12 +22,12 @@ const animal = Animal("кот", "мяу", "Мурзик");
 
 animal.letVoice();
 */
-/***************************************************************************/
+/**********************************************************/
 
 function Animal(type, voice, name) {
   this.type = type;
-  this.name = this.name;
-  this.voice = this.voice;
+  this.name = name;
+  this.voice = voice;
 }
 
 Animal.prototype.letVoice = function letVoice() {
