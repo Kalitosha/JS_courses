@@ -1,5 +1,5 @@
-// Script 1
-// Задание: Перепишите класс в классическом виде.
+// Script 2
+// Перепишите класс в современном виде.
 /*
 const AnimalPrototype = {
   letVoice() {
@@ -23,17 +23,19 @@ const animal = Animal("кот", "мяу", "Мурзик");
 animal.letVoice();
 */
 /***************************************************************************/
+class Animal {
+  constructor(type, voice, name) {
+    this.type = type;
+    this.name = name;
+    this.voice = voice;
+  }
 
-function Animal(type, voice, name) {
-  this.type = type;
-  this.name = this.name;
-  this.voice = this.voice;
+  letVoice() {
+    console.log(
+      `${this.name} говорит ${this.voice}! ${this.type} очень милый.`
+    );
+  }
 }
-
-Animal.prototype.letVoice = function letVoice() {
-  console.log
-  (`${this.name} говорит ${this.voice}! ${this.type} очень милый.`);
-};
 
 const animal = new Animal("кот", "мяу", "Мурзик");
 animal.letVoice();
