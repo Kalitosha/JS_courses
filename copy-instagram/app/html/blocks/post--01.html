@@ -1,0 +1,51 @@
+<div class="post">
+
+	<div class="post__header">
+
+		<div class="post__user">
+			@@include('user.html')
+		</div>
+
+		<div class="post__links">
+			@@include('links/link-delete.html')
+			@@include('links/link-edit.html')
+		</div>
+	</div>
+
+	<div class="post__img">
+		<img src="img/posts/man-in-forest.jpg" alt="Photo">
+	</div>
+
+	<!-- post__data  -->
+	<div class="post__data">
+
+		<div class="post__description">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.
+		</div>
+
+		<div class="post__hashtags">
+			<a href="#">#forest</a>
+			<a href="#">#travel</a>
+			<a href="#">#journey</a>
+			<a href="#">#holiday</a>
+		</div>
+	</div>
+	<!-- // post__data -->
+
+	<!-- post__comments -->
+	<div class="post__comments">
+		@@include('post-comment.html')
+		@@include('post-comment.html')
+		@@include('post-comment.html')
+		@@include('post-comment.html')
+	</div>
+	<!-- // post__comments -->
+
+	<div class="post__comment-form">
+		<div class="comment-form">
+			<textarea class="comment-form__textarea" placeholder="Добавить комментарий"></textarea>
+			<button disabled class="comment-form__button">Опубликовать</button>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,36 @@
+.comment-form {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.comment-form__textarea {
+	width: auto;
+	flex-grow: 5;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	padding: 10px 10px;
+	border: none;
+	min-height: 40px;
+}
+
+.comment-form__textarea:focus {
+	outline: none;
+}
+
+.comment-form__button {
+	flex-shrink: 0;
+	font-size: 15px;
+	font-weight: 600;
+	color: #4299E1;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+.comment-form__button[disabled] {
+	opacity: 0.5;
+	cursor: default;
+}
+

@@ -1,0 +1,58 @@
+<div class="post">
+
+	<div class="post__header">
+
+		<div class="post__user">
+			@@include('user.html')
+		</div>
+
+		<div class="post__links">
+			@@include('links/link-delete.html')
+			@@include('links/link-edit.html')
+		</div>
+	</div>
+
+	<div class="post__img">
+		<div class="slider owl-theme">
+			<img src="img/posts/js-carousel/00.jpg" alt="Photo">
+			<img src="img/posts/js-carousel/01.jpg" alt="Photo">
+			<img src="img/posts/js-carousel/02.jpg" alt="Photo">
+			<img src="img/posts/js-carousel/03.jpg" alt="Photo">
+			<img src="img/posts/js-carousel/04.jpg" alt="Photo">
+			<img src="img/posts/js-carousel/05.jpg" alt="Photo">
+			<img src="img/posts/js-carousel/06.jpg" alt="Photo">
+			<img src="img/posts/js-carousel/07.jpg" alt="Photo">
+			<img src="img/posts/js-carousel/08.jpg" alt="Photo">
+			<img src="img/posts/js-carousel/09.jpg" alt="Photo">
+		</div>
+	</div>
+
+	<!-- post__data  -->
+	<div class="post__data">
+
+		<div class="post__description">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.
+		</div>
+
+		<div class="post__hashtags">
+			<a href="#">#forest</a>
+			<a href="#">#travel</a>
+			<a href="#">#journey</a>
+		</div>
+	</div>
+	<!-- // post__data -->
+
+	<!-- post__comments -->
+	<div class="post__comments">
+		@@include('post-comment.html')
+	</div>
+	<!-- // post__comments -->
+
+	<div class="post__comment-form">
+		<div class="comment-form">
+			<textarea class="comment-form__textarea" placeholder="Добавить комментарий"></textarea>
+			<button disabled class="comment-form__button">Опубликовать</button>
+		</div>
+	</div>
+
+</div>
