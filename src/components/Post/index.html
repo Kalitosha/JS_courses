@@ -1,0 +1,112 @@
+<div class="post">
+  <div class="post__header">
+    <div class="post__user">
+      <div class="user">
+        <a href="#" class="user__avatar">
+          <img src="{%user.image%}" alt="" />
+        </a>
+        <a href="#" class="user__name">
+          {%user.name%} {%user.surname%}  <!--делаем шаблоны  -->
+        </a>
+      </div>
+    </div>
+
+    <div class="post__links">
+      <a href="#" class="edit-link">
+        <i class="far fa-trash-alt"></i>
+        Delete
+      </a>
+
+      <a href="edit.html" class="edit-link">
+        <i class="fas fa-pencil-alt"></i>
+        Edit
+      </a>
+    </div>
+  </div>
+
+  <div class="post__img">
+    <img src="{%content.image%}" alt="Photo" />
+  </div>
+
+  <!-- post__data  -->
+  <div class="post__data">
+    <div class="post__description"> 
+      {%content.description%}
+    </div>
+
+    <div class="post__hashtags">
+      
+      <a href="#">{%content.tags%}</a>
+      <a href="#">{%content.tags%}</a>
+      <a href="#">{%content.tags%}</a>
+      <a href="#">{%content.tags%}</a>
+      <!-- <a href="#">#forest</a>
+      <a href="#">#travel</a>
+      <a href="#">#journey</a>
+      <a href="#">#holiday</a> -->
+    </div>
+  </div>
+  <!-- // post__data -->
+
+  <!-- post__comments -->
+  <!-- <div class="post__comments">
+    <div class="post-comment">
+      <a href="#" class="post-comment__avatar">
+        <img src="img/avatars/01.png" alt="" />
+      </a>
+      <div class="post-comment__text">
+        <a href="#" class="post-comment__name">John Golt</a> Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem,
+        incidunt sit non a error harum atque magni, dolor necessitatibus cum! In
+        eum earum nam, ipsam dolorem.
+      </div>
+    </div>
+
+    <div class="post-comment">
+      <a href="#" class="post-comment__avatar">
+        <img src="img/avatars/01.png" alt="" />
+      </a>
+      <div class="post-comment__text">
+        <a href="#" class="post-comment__name">John Golt</a> Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem,
+        incidunt sit non a error harum atque magni, dolor necessitatibus cum! In
+        eum earum nam, ipsam dolorem.
+      </div>
+    </div>
+
+    <div class="post-comment">
+      <a href="#" class="post-comment__avatar">
+        <img src="img/avatars/01.png" alt="" />
+      </a>
+      <div class="post-comment__text">
+        <a href="#" class="post-comment__name">John Golt</a> Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem,
+        incidunt sit non a error harum atque magni, dolor necessitatibus cum! In
+        eum earum nam, ipsam dolorem.
+      </div>
+    </div>
+
+    <div class="post-comment">
+      <a href="#" class="post-comment__avatar">
+        <img src="img/avatars/01.png" alt="" />
+      </a>
+      <div class="post-comment__text">
+        <a href="#" class="post-comment__name">John Golt</a> Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem,
+        incidunt sit non a error harum atque magni, dolor necessitatibus cum! In
+        eum earum nam, ipsam dolorem.
+      </div>
+    </div>
+  </div> -->
+  <!-- // post__comments -->
+
+   <div class="post__comment-form">
+    <div class="comment-form">
+      <textarea
+        class="comment-form__textarea"
+        placeholder="Добавить комментарий"
+      ></textarea>
+      <button disabled class="comment-form__button">Опубликовать</button>
+    </div>
+  </div> 
+</div>
