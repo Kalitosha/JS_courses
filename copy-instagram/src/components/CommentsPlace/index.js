@@ -3,7 +3,7 @@ import htmlTemplate from "./index.html";
 
 export default class CommentsPlace extends Component {
   constructor(originalArgs = {}) {
-    super("commentPlace");
+    super("commentsPlace");
     this.comments = [];
   }
 

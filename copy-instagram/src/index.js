@@ -20,24 +20,27 @@ const container = new Container();
 for (const post of store.posts) {
   container.add(new Post(post));
 }
+
+console.log(container);
 /*
 for(let i = 0;  i < store.posts.length; i++){
   for(const comment of store.posts[i].comments){
-      container.components[i].commentsPlace.add(new Comment(comment))
+    console.log(container.components[i].commentsPlace);
+    console.log(comment);
+    
+    //  container.components[i].commentsPlace.add(new Comment(comment))
   }
 }*/
-
-for (const post of store.posts) {
+/*
   for (const comment of post.comments){
     for (const component of container.components){
-      console.log(component);
-      component.add(new CommentsPlace);
+      console.log(component.CommentsPlace);
       //component.CommentsPlace.add(new Comment(comment));
     }
     //console.log(container.components);
     //container.components.CommentPlace.add(new Comment(comment))
   }
-}
+*/
 
 app.router.add("/", [header, container]);
 

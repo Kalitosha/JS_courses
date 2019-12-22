@@ -18,7 +18,7 @@ export default class Post extends Component {
         tags: []
       },
 
-      //comments: [],
+      comments: [],
       ...originalArgs // тут мы сливаем данные с данными по умолчанию
     };
 
@@ -34,7 +34,9 @@ export default class Post extends Component {
       tags: args.content.tags.slice()
     };
 
-    /*this.comments = args.comments.map(x => ({
+    //this.commentsPlace = commentsPlace;
+
+    this.comments = args.comments.map(x => ({
       user: {
         name: x.user.name,
         surname: x.user.surname,
@@ -42,11 +44,14 @@ export default class Post extends Component {
       },
 
       content: x.content
-    }));*/
+    }));
   }
 
-  getHtmlTemplate() {
-    // переопределяем ф-ю // должна возвращаться строка с html кодом
+  // add(commentsPlace) {
+  //   this.commentsPlace.push(commentsPlace);
+  // }
+  
+  getHtmlTemplate() { // переопределяем ф-ю // должна возвращаться строка с html кодом
     return htmlTemplate // или можно было прописать require прям тут
       .replace(/{%user.name%}/g, this.user.name) // заменяем шаблоны // флаг g замена всех вхождений
       .replace(/{%user.surname%}/g, this.user.surname)
@@ -54,7 +59,7 @@ export default class Post extends Component {
 
       .replace(/{%content.image%}/g, this.content.image)
       .replace(/{%content.description%}/g, this.content.description)
-      .replace(/{%content.tags%}/g, this.content.tags);//`<a href="#"> ${this.content.tags}</a>`);
+      .replace(/{%content.tags%}/g, ...this.content.tags);      
   }
 }
 
