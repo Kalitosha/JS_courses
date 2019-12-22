@@ -2,8 +2,8 @@
   "posts": [
     {
       "user": {
-        "name": "Алексей",
-        "surname": "Данчин",
+        "name": "Владимир",
+        "surname": "Федоров",
         "image": "img/avatars/01.png"
       },
 
@@ -16,8 +16,8 @@
       "comments": [
         {
           "user": {
-            "name": "John",
-            "surname": "Golt",
+            "name": "Федот",
+            "surname": "Стрелец",
             "image": "img/avatars/01.png"
           },
           "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem, incidunt sit non a error harum atque magni, dolor necessitatibus cum! In eum earum nam, ipsam dolorem."
@@ -27,9 +27,9 @@
 
     {
       "user": {
-        "name": "Алексей",
-        "surname": "Данчин",
-        "image": "img/avatars/01.png"
+        "name": "Людмила",
+        "surname": "Ленина",
+        "image": "img/avatars/02.png"
       },
 
       "content": {
@@ -41,13 +41,39 @@
       "comments": [
         {
           "user": {
-            "name": "John",
-            "surname": "Golt",
+            "name": "Дарья",
+            "surname": "Иванова",
+            "image": "img/avatars/02.png"
+          },
+          "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem, incidunt sit non a error harum atque magni, dolor necessitatibus cum! In eum earum nam, ipsam dolorem."
+        }
+      ]
+    },
+
+    {
+      "user": {
+        "name": "Екатерина",
+        "surname": "Гальцева",
+        "image": "img/avatars/02.png"
+      },
+
+      "content": {
+        "image": "img/posts/Thai_Christmas.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.",
+        "tags": ["#forest", "#travel", "#journey", "#holiday"]
+      },
+
+      "comments": [
+        {
+          "user": {
+            "name": "Дмитрий",
+            "surname": "Сергеев",
             "image": "img/avatars/01.png"
           },
           "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem, incidunt sit non a error harum atque magni, dolor necessitatibus cum! In eum earum nam, ipsam dolorem."
         }
       ]
     }
+
   ]
 }

@@ -1,4 +1,5 @@
 import Component from "../Component";
+import CommentsPlace from "../CommentsPlace";
 import htmlTemplate from "./index.html";
 
 export default class Post extends Component {
@@ -34,9 +35,9 @@ export default class Post extends Component {
       tags: args.content.tags.slice()
     };
 
-    //this.commentsPlace = commentsPlace;
+    this.commentsPlace = new CommentsPlace(args.comments);
 
-    this.comments = args.comments.map(x => ({
+    /*this.comments = args.comments.map(x => ({
       user: {
         name: x.user.name,
         surname: x.user.surname,
@@ -44,14 +45,11 @@ export default class Post extends Component {
       },
 
       content: x.content
-    }));
+    }));*/
+
   }
 
-  // add(commentsPlace) {
-  //   this.commentsPlace.push(commentsPlace);
-  // }
-  
-  getHtmlTemplate() { // переопределяем ф-ю // должна возвращаться строка с html кодом
+  getHtmlTemplate() {// переопределяем ф-ю // должна возвращаться строка с html кодом    
     return htmlTemplate // или можно было прописать require прям тут
       .replace(/{%user.name%}/g, this.user.name) // заменяем шаблоны // флаг g замена всех вхождений
       .replace(/{%user.surname%}/g, this.user.surname)
@@ -59,7 +57,14 @@ export default class Post extends Component {
 
       .replace(/{%content.image%}/g, this.content.image)
       .replace(/{%content.description%}/g, this.content.description)
-      .replace(/{%content.tags%}/g, ...this.content.tags);      
+      .replace(/{%content.tags%}/g, this.content.tags.join(" "));
+  }
+
+  render() {    
+    const element = super.render();
+    console.log(this.commentsPlace.comments)
+    element.append(this.commentsPlace.comments.map(x => x.render()));
+    return element;
   }
 }
 

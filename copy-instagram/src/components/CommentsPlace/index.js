@@ -2,9 +2,9 @@ import Component from "../Component";
 import htmlTemplate from "./index.html";
 
 export default class CommentsPlace extends Component {
-  constructor(originalArgs = {}) {
+  constructor(args/*originalArgs = {}*/) {
     super("commentsPlace");
-    this.comments = [];
+    this.comments = args;  //[];
   }
 
   add(comment) {
