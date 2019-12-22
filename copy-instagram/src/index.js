@@ -5,7 +5,10 @@ import Application from "./Application";
 import Header from "./components/Header";
 import Container from "./components/Container";
 import Post from "./components/Post";
+import CommentsPlace from "./components/CommentsPlace";
 import Comment from "./components/Comment";
+
+import store from "./fakeData.json";
 
 const app = new Application({
   el: document.querySelector("#app")
@@ -14,35 +17,27 @@ const app = new Application({
 const header = new Header();
 const container = new Container();
 
-container.add(
-  new Post({
-    user: {
-      name: "Алексей",
-      surname: "Данчин",
-      image: "img/avatars/01.png"
-    },
+for (const post of store.posts) {
+  container.add(new Post(post));
+}
+/*
+for(let i = 0;  i < store.posts.length; i++){
+  for(const comment of store.posts[i].comments){
+      container.components[i].commentsPlace.add(new Comment(comment))
+  }
+}*/
 
-    content: {
-      image: "img/posts/man-in-forest.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.",
-      tags: ["#forest", "#travel", "#journey", "#holiday"]
-    },
-    
-    comment: new Comment({
-        user: { name: "John", surname: "Golt", image: "img/avatars/01.png" },
-        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem, incidunt sit non a error harum atque magni, dolor necessitatibus cum! In eum earum nam, ipsam dolorem."
-    })
-    
-    
-    // comments: [
-    //   {
-    //     user: { name: "John", surname: "Golt", image: "img/avatars/01.png" },
-    //     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem, incidunt sit non a error harum atque magni, dolor necessitatibus cum! In eum earum nam, ipsam dolorem."
-    //   }
-    // ]
-  })
-);
-
+for (const post of store.posts) {
+  for (const comment of post.comments){
+    for (const component of container.components){
+      console.log(component);
+      component.add(new CommentsPlace);
+      //component.CommentsPlace.add(new Comment(comment));
+    }
+    //console.log(container.components);
+    //container.components.CommentPlace.add(new Comment(comment))
+  }
+}
 
 app.router.add("/", [header, container]);
 

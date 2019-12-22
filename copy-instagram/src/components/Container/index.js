@@ -11,7 +11,6 @@ export default class Container extends Component{
 
     add(component){ // по-хорошему, надо бло добавить проверку существования компонента в коллекции компонентов
         this.components.push(component);
-
     }
 
     render(){
