@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "src": "img/posts/man-in-forest.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.",
+      "tags": ["forest", "travel", "journey", "holiday"],
+      "user": {
+        "ava": "img/avatars/02.png",
+        "name": "Alexandra",
+        "surname": "Alexandrova"
+      },
+      "comments": [
+        {
+          "id": 1,
+          "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem, incidunt sit non a error harum atque magni, dolor necessitatibus cum! In eum earum nam, ipsam dolorem.",
+          "user": {
+            "ava": "img/avatars/02.png",
+            "name": "Johna",
+            "surname": "Golt"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "src": "img/posts/girl-pc.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.",
+      "tags": ["coding", "streamer"],
+      "user": {
+        "ava": "img/avatars/02.png",
+        "name": "Alexandra",
+        "surname": "Alexandrova"
+      },
+      "comments": [
+        {
+          "id": 1,
+          "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque odio eaque autem, incidunt sit non a error harum atque magni, dolor necessitatibus cum! In eum earum nam, ipsam dolorem.",
+          "user": {
+            "ava": "img/avatars/02.png",
+            "name": "Johna",
+            "surname": "Golt"
+          }
+        }
+      ]
+    }
+  ]
+}
