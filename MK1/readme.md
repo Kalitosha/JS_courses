@@ -86,9 +86,9 @@ yarn-error.log*
 *.sln
 *.sw*
 ```
-3. Далее работа с консолью. Установка `babel` и `webpack (dev-server)`
+3. Далее работа с консолью. Установка `babel` и `webpack-dev-server`
 - `babel` нужен для трансляции из ES6 в старый, рабочий стандарт (да-да, нод до сих пор не работает с новыми плюшками)
-- `webpack (dev-server)` нужен для 
+- `webpack (dev-server)` сборщик проекта
 
 ```
 :~$ npm install --save-dev @babel/core @babel/node @babel/cli @babel/preset-env @babel/plugin-transform-runtime @babel/runtime babel-loader webpack webpack-dev-server webpack-cli
@@ -117,10 +117,73 @@ Get-ExecutionPolicy
 ```
 Set-ExecutionPolicy unrestricted
 ```
-Когда поступит запрос, нужно ввести ``Y``. Готово
-
+Когда поступит запрос, нужно ввести ``Y``.
 
 > Вновь включить запрет на выполнение пакетных файлов в PowerShell можно командой *``Set-ExecutionPolicy Restricted``* 
 
+6. Для сборки проекта создаем файл index.html
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script src='/dist/app.js'></script>
+</body>
+</html>
+```
+7. В package.json добавляем
+```
+"scripts": {
+	"serve": "webpack-dev-server --mode development",
+	"nodemon": "nodemon --exec babel-node server.js",
+	"build": "webpack --mode production",
+	"test": "mocha --require @babel/register"
+},
+```
+> Добавленные скрипты нужны для краткой записи длинных команд. Их называют alias (в пер. псевдоним)
+>
+> Запуск команды ``serve`` равноценен ``webpack-dev-server --mode development``
 
+8. Создаем файл с настройками для сборщика``webpack.config.js``
+```
+const path = require('path')
 
+module.exports = {
+	entry: {
+		app: './src/index.js'
+	},
+	output: {
+		filename: '[name].js',
+		path: path.join(__dirname, '/dist'),
+		publicPath: '/dist'
+	},
+	module: {
+		rules: [{
+			test: /\.js$/,
+			loader: 'babel-loader',
+			exclude: '/node_modules/'
+		}]
+	},
+	devServer: {
+		overlay: true,
+    port: 5005
+	}
+}
+```
+> ``entry`` - точка входа
+
+> ``output`` - тоска выкладки
+
+> ``module`` - модули
+
+> ``devServer: port [если нужно, указываете свой порт или вообще убираете эту строчку]`` тот, что по умолчанию (8080) может быть занят (как это было у меня)
+
+9. В папке проекта должна быть папка scr, в которой лежит файл index.js - точка входа приложения (мы ее в конфиге вебпак задали).
+Далее запускаем сервер разработки
+```
+ npm run serve
+ ```
+И открываем в браузере http://localhost:5005/
