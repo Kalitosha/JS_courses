@@ -33,13 +33,14 @@ ___
 11. >**`npm install express --save`**  Устанавливает express и вносит запись о нем в package.json в секцию dependencies 
 12. >**`npm install grunt --save-dev`** Устанавливает grunt и вносит запись о нем в package.json в секцию devDependencies 
 13. > **`npm init -y`**  создается *package.json* по умолчанию (`-y`/  `--yes`чтобы полностью пропустить вопросник)
-14. **`npm install config`** создается файл *package-lock.json*
+14. > **`npm install config`** создается файл *package-lock.json*
 15. > **`node + название файла`** для запуска проекта
 
 Немного про взаимодействие разбросанных по разным файлам кусков JS кода
 --
 Для того, чтобы какой-то кусок кода был виден из вне, надо прописать в файле "родителе", что именно мы хотим показать миру:
 ``/*старая версия*//module.exports = "название объекта или модуля"``
+
 **`` export default 'что';``**
 > export default («эспорт по умолчанию»)
 
@@ -118,8 +119,8 @@ Set-ExecutionPolicy unrestricted
 ```
 Когда поступит запрос, нужно ввести ``Y``. Готово
 
-```sh 
-Вновь включить запрет на выполнение пакетных файлов в PowerShell можно командой *``Set-ExecutionPolicy Restricted``* 
-```
+
+> Вновь включить запрет на выполнение пакетных файлов в PowerShell можно командой *``Set-ExecutionPolicy Restricted``* 
+
 
 
