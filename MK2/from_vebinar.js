@@ -15,7 +15,8 @@ console.log('/*******************************************************/');
 //document.querySelectorAll('*'); // выведет nodelist
 //// раньше чтобы работать с ним как с массивом надо было обернуть его в Array.from(document.querySelectorAll('*'))
 //// но теперь можно заимствовать контекст (заимствовать метод)
-//Array.prototype.filter.apply.call( document.querySelectorAll('*'), function(){console.log("prototype");} ); // заимствуем у массива метод filter()
+// берем пустой массив Array.prototype, у него берем метод filter и привязываем контекст методом call
+//Array.prototype.filter.call( document.querySelectorAll('*'), function(){console.log("prototype");} ); // заимствуем у массива метод filter()
 
 function f(){ // проверяет присутствует ли пятерка в списке аргументов
     if([].includes.call(arguments, 5)) { // тут мы у массива заимствуем метод includes() и вызываем этот метод с привязкой контекста arguments
