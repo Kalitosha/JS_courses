@@ -138,3 +138,39 @@ module.exports = {
  npm run serve
  ```
 И открываем в браузере ``http://localhost:5005/``
+
+
+___
+Обновление Node.js
+--
+
+Install nvm on windows to manage more than one versions of node.
+
+- Go to https://github.com/coreybutler/nvm-wi...​
+- Download the nvm-setup. zip
+- Open the zip & execute the installer
+- Read & accept the license agreement
+- If you have Node installed, you'll see a notification asking you if you want NVM to control the installed version: click "yes"
+- Click finish
+- Go to the console and execute
+
+```
+$ nvm ls # lists all installed versions
+$ nvm install latest # install the latest version of nodejs and npm
+
+$ nvm ls # should list now the newly installed version
+$ nvm use 14.16.1 # start using version 14.16.1
+```
+
+> How to install other versions
+
+```
+$ nvm install --version--
+```
+
+> And then switch to that version with:
+
+
+```
+$ nvm use --version--
+```
